@@ -9,6 +9,9 @@ zerotier-idtool genmoon moon.json
 ./mkmoonworld-x86_64 moon.json
 cp *.moon moons.d
 mv world.bin planet
-mkdir /app/frontend/build/static/$ZU_DEFAULT_USERNAME
-cp -f /var/lib/zerotier-one/planet /app/frontend/build/static/$ZU_DEFAULT_USERNAME/planet
+file="/app/frontend/build/static/$ZU_DEFAULT_USERNAME"
+if [ ! -f "$file" ]; then
+  mkdir $file
+fi
+cp -f /var/lib/zerotier-one/planet $file/planet
 echo Run Planet is generated successfully...
