@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ./var/lib/zerotier-one/
+cd /var/lib/zerotier-one
 chmod 777 mkmoonworld-x86_64
 zerotier-idtool initmoon identity.public > moon.json
 moonip="[\"$ZU_DEFAULT_IP_PROT\"]"
