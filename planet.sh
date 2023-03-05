@@ -14,5 +14,5 @@ file="/app/frontend/build/static/$ZU_DEFAULT_USERNAME"
 if [ ! -d "$file" ]; then
  mkdir $file
 fi
-cp -f /var/lib/zerotier-one/planet $file/planet
+cp -f /var/lib/zerotier-one/planet /app/frontend/build/static/$ZU_DEFAULT_USERNAME
 echo Run Planet is generated successfully...
