@@ -8,6 +8,7 @@ sed -i "s#\[\]#${moonip}#g" moon.json
 cat moon.json
 zerotier-idtool genmoon moon.json
 ./mkmoonworld-x86_64 moon.json
+mkdir moons.d
 cp *.moon moons.d
 mv world.bin planet
 file="/app/frontend/build/static/$ZU_DEFAULT_USERNAME"
