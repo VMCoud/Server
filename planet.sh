@@ -2,6 +2,7 @@
 cd /var/lib/zerotier-one
 cp -rf /Server/mkmoonworld-x86_64 /var/lib/zerotier-one
 chmod 777 mkmoonworld-x86_64
+sleep 6s
 zerotier-idtool initmoon identity.public > moon.json
 moonip="[\"$ZU_DEFAULT_IP_PROT\"]"
 sed -i "s#\[\]#${moonip}#g" moon.json
